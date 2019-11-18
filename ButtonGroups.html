@@ -12,10 +12,16 @@
     <script src="https://kit.fontawesome.com/5426cd9076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="btn-group-vertical">
+    <div class="btn-group">
         <button class="btn btn-info ">Button1</button>
         <button class="btn btn-info">Button2</button>
-        <button class="btn btn-info">Button3</button>
+        <div class="btn-group">
+            <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Button3</button>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Button4</a>
+                <a href="#" class="dropdown-item">Button5</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
