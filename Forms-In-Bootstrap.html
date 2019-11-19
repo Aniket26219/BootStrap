@@ -15,7 +15,7 @@
     <!-- You can use different validation classes to provide valuable feedback to users. Add either .was-validated or .needs-validation to the <form> element, depending on whether you want to provide validation feedback before or after submitting the form. The input fields will have a green (valid) or red (invalid) border to indicate what's missing in the form. You can also add a .valid-feedback or .invalid-feedback message to tell the user explicitly what's missing, or needs to be done before submitting the form. -->
     <div class="container">
         <br>
-        <form action="/ButtonGroups.html" class="was-validated">
+        <form action="/ButtonGroups.html" class="needs-validation" novalidate>
             <div class="form-group mb-2 mr-sm-2">
                 <label for="email">Email:</label>
                 <input type="email" placeholder="Enter email" id="email" class="form-control" required>
@@ -35,5 +35,26 @@
             <button class="btn btn-primary mb-2">Submit</button>
         </form>
     </div>
+    <!-- I haven't read this scrip whenever I read it remove this tag -->
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </body>
 </html>
