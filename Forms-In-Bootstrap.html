@@ -12,19 +12,27 @@
             <script src="https://kit.fontawesome.com/5426cd9076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Form controls automatically receive some global styling with Bootstrap:
-    All textual <input>, <textarea>, and <select> elements with class .form-control have a width of 100%.-->
+    <!-- You can use different validation classes to provide valuable feedback to users. Add either .was-validated or .needs-validation to the <form> element, depending on whether you want to provide validation feedback before or after submitting the form. The input fields will have a green (valid) or red (invalid) border to indicate what's missing in the form. You can also add a .valid-feedback or .invalid-feedback message to tell the user explicitly what's missing, or needs to be done before submitting the form. -->
     <div class="container">
-        <form action="/ButtonGroups.html" class="form-inline">
-                <label for="email" class="mr-sm-2">Email:</label>
-                <input type="email" placeholder="Enter email" id="email" class="form-control mb-2 mr-sm-2">
-                <label for="password" class="mr-sm-2">Password:</label>
-                <input type="password" placeholder="Enter password" id="password" class="form-control mb-2 mr-sm-2">
-                <div class="form-check mb-2 mr-sm-2">
-                    <label class="form-check-label"></label>
-                    <input type="checkbox" name="" id="" class="form-check-input mr-sm-2">Remember Me
-                </div>
-                <button class="btn btn-primary mb-2">Submit</button>
+        <br>
+        <form action="/ButtonGroups.html" class="was-validated">
+            <div class="form-group mb-2 mr-sm-2">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter email" id="email" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please enter the e-mail.</div>
+            </div>
+            <div class="form-group mb-2 mr-sm-2">
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Enter password" id="password" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please enter the password.</div>
+            </div>
+            <div class="form-check mb-2 mr-sm-2">
+                <label class="form-check-label"></label>
+                <input type="checkbox" name="" id="" class="form-check-input">Remember Me
+            </div>
+            <button class="btn btn-primary mb-2">Submit</button>
         </form>
     </div>
 </body>
