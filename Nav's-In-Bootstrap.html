@@ -12,18 +12,27 @@
     <script src="https://kit.fontawesome.com/5426cd9076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Turn the nav menu into navigation tabs with the .nav-tabs class. Add the .active class to the active/current link. If you want the tabs to be togglable, see the last example on this page. -->
-    <ul class="nav nav-tabs nav-justified">
-        <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Nav-tabs</a>
-            <div class="dropdown-menu">
-                <a href="" class="dropdown-item">Item-1</a>
-                <a href="" class="dropdown-item">Item-2</a>
-                <a href="" class="dropdown-item">Item-3</a>
-            </div>
-        </li>
-        <li class="nav-item"><a href="" class="nav-link active">Nav-tabs</a></li>
-        <li class="nav-item"><a href="" class="nav-link disabled">Disabled</a></li>
+    <!-- To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a <div> element with class .tab-content.
+
+If you want the tabs to fade in and out when clicking on them, add the .fade class to .tab-pane: -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a href="#tab1" class="nav-link" data-toggle="tab">Nav-tabs</a></li>
+        <li class="nav-item"><a href="#tab2" class="nav-link active" data-toggle="tab">Nav-tabs</a></li>
+        <li class="nav-item"><a href="#tab3" class="nav-link disabled" data-toggle="tab">Disabled</a></li>
     </ul>
+    <div class="tab-content">
+        <div class="tab-pane container active" id="tab1">
+            <h3>Tab 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolor?</p>
+        </div>
+        <div class="tab-pane container fade" id="tab2">
+            <h3>Tab 2</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, iure!</p>
+        </div>
+        <div class="tab-pane container fade" id="tab3">
+            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, laudantium.</h3>
+        </div>
+    </div><br><br><br><br><br>
     <!-- Turn the nav menu into navigation pills with the .nav-pills class. If you want the pills to be togglable, see the last example on this page. -->
     <ul class="nav nav-pills nav-justified">
         <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Normal</a>
