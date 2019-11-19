@@ -14,13 +14,25 @@
 <body>
     <!-- Turn the nav menu into navigation tabs with the .nav-tabs class. Add the .active class to the active/current link. If you want the tabs to be togglable, see the last example on this page. -->
     <ul class="nav nav-tabs nav-justified">
-        <li class="nav-item"><a href="" class="nav-link">Nav-tabs</a></li>
+        <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Nav-tabs</a>
+            <div class="dropdown-menu">
+                <a href="" class="dropdown-item">Item-1</a>
+                <a href="" class="dropdown-item">Item-2</a>
+                <a href="" class="dropdown-item">Item-3</a>
+            </div>
+        </li>
         <li class="nav-item"><a href="" class="nav-link active">Nav-tabs</a></li>
         <li class="nav-item"><a href="" class="nav-link disabled">Disabled</a></li>
     </ul>
     <!-- Turn the nav menu into navigation pills with the .nav-pills class. If you want the pills to be togglable, see the last example on this page. -->
     <ul class="nav nav-pills nav-justified">
-        <li class="nav-item"><a href="" class="nav-link">Normal</a></li>
+        <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Normal</a>
+            <div class="dropdown-menu">
+                <a href="" class="dropdown-item">Item-1</a>
+                <a href="" class="dropdown-item">Item-2</a>
+                <a href="" class="dropdown-item">Item-3</a>
+            </div>
+        </li>
         <li class="nav-item"><a href="" class="nav-link disabled">disabled</a></li>
         <li class="nav-item"><a href="" class="nav-link active">Active</a></li>
     </ul>
