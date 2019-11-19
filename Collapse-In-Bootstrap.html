@@ -18,11 +18,33 @@
 To control (show/hide) the collapsible content, add the data-toggle="collapse" attribute to an <a> or a <button> element. Then add the data-target="#id" attribute to connect the button with the collapsible content (<div id="demo">). -->
     <br>
     <!-- <p>Note: For <a> elements, you can use the href attribute instead of the data-target attribute:</p> -->
-    <a href="#demo" class="btn btn-primary" data-toggle="collapse">Click Me</a>
-    <div class="collapse show" id="demo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae nostrum pariatur molestias suscipit odit autem, expedita doloremque voluptatum architecto? Enim quae provident nesciunt nulla consequuntur nam voluptatem recusandae perferendis ratione?</div>
-    <br>
-    <p>Click on the button to see the effect</p>
-    <p>by default the collpase content is hidden if we add the show with collapse it will first show the cotent</p>
+        <!-- always remember that you have to give the data-parent=" " in the above of the card-body -->
+    <div id="parent">
+        <div class="card">
+            <div class="card-header">
+                <a href="#one" class="card-link" data-toggle="collapse">Item-1</a>
+            </div>
+            <div id="one" class="collapse show" data-parent="#parent">
+                <div class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, et!</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a href="#two" class="card-link" data-toggle="collapse">Item-2</a>
+            </div>
+            <div id="two" class="collapse" data-parent="#parent">
+                <div class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, et!</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a href="#third" class="card-link" data-toggle="collapse">Item-3</a>
+            </div>
+            <div id="third" class="collapse" data-parent="#parent">
+                <div class="card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, et!</div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
