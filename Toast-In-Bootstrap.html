@@ -12,21 +12,40 @@
     <script src="https://kit.fontawesome.com/5426cd9076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button class="btn btn-primary" id="demo">Click Me</button>
-            <div class="toast">
-                <div class="toast-header">
-                    Toast Header
-                </div>
-                <div class="toast-body">
-                    Toast Body
-                </div>
-            </div>
+    <!-- <button class="btn btn-primary" id="demo">Hover Over Me</button>
+    <div class="toast" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto text-primary">Header</strong>
+            <small class="text-muted">3 mins ago</small>
+            <button class="ml-2 mb-2 close" data-dismiss="toast">&times;    
+            </button>
+        </div>
+        <div class="toast-body">
+            Toast Body
+        </div>
+    </div> -->
+    <button class="btn btn-primary" id="practice">Click Me</button>
+    <div class="toast" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto text-primary">Header</strong>
+            <small class="text-muted">3 mins ago</small>
+            <button class="ml-2 mb-2 close" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">Toast Body.....</div>
+    </div>
 </body>
 <!-- this script is necessary to activate the toast
 in the script we just have to give the id and the function in my case my id is demo and when I hover it should show me the toast we can change it any time -->
 <script>
     $(document).ready(function () {
         $("#demo").hover(function () {
+            $('.toast').toast('show');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#practice").click(function () {
             $('.toast').toast('show');
         });
     });
