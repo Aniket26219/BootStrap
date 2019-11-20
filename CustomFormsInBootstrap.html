@@ -13,9 +13,21 @@
 </head>
 <body>
     <form>
-        <!-- To create a custom select menu, add the .custom-select class to the <select> element: -->
-            <label for="range">Custom Range</label>
-        <input type="range" name="" id="range" class="custom-range">
+        <!-- To create a custom file upload, wrap a container element with a class of .custom-file around the input with type="file". Then add the .custom-file-input to it.
+            Tip: If you use labels for accompanying text, add the .custom-file-label class to it. Note that the value of the for attribute should match the id of the checkbox:-->
+            <div class="custom-file">
+                <input type="file" name="" id="customfile" class="custom-file-input">
+                <label for="customfile" class="custom-file-label">choose a file</label>
+            </div>
+            <input type="file" name="" id="defaultfile">
     </form>
+    <script>
+        // note I haven't read the following code if I will remove this code
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
 </body>
 </html>
