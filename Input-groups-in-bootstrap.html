@@ -13,17 +13,25 @@
 </head>
 <body>
     <div class="container">
-        <form>
-            <div class="input-group mb-2 input-group-sm">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><input type="checkbox" name="" id=""></span>
-                </div>
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><input type="radio" name="" id=""></span>
-                </div>
-                <input type="text" placeholder="last" class="form-control">
+        <div class="input-group mr-sm-2 mb-2">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-primary">Button</button>
             </div>
-        </form>
+            <input type="text" placeholder="input with button" class="form-control">
+        </div>
+        <div class="input-group mr-sm-4 mb-2">
+            <input type="text" placeholder="Search" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-success">Go</button>
+            </div>
+        </div>
+        <div class="input-group mr-sm-4 mb-2">
+            <input type="text" placeholder="Search" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-success">Ok</button>
+                <button class="btn btn-danger">Cancel</button>            
+            </div>
+        </div>
     </div>
 </body>
 </html>
