@@ -12,11 +12,12 @@
     <script src="https://kit.fontawesome.com/5426cd9076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="bg-danger w-25">25 % width</div>
-        <div class="bg-warning w-50">50 % width</div>
-        <div class="bg-info w-75">75 % width</div>
-        <div class="bg-success w-100">100 % width</div>
+    <!-- in this example p means padding and if we try to give the padding to the main div is having style then the columns will become smaller that means we are applying the padding to the main block and if we give the padding to the columns seperately they become more larger and in the every column of div we have applied the p means padding and 2 means 8 px if didn't change the default font size which is 16px -->
+    <div style="height:200px;background-color:#ddd;">
+        <div class="h-25 d-inline-block p-2 bg-danger">Height 25 %</div>
+        <div class="h-50 d-inline-block p-2 bg-warning">Height 50 %</div>
+        <div class="h-75 d-inline-block p-2 bg-info">Height 75 %</div>
+        <div class="h-100 d-inline-block p-2 bg-success">Height 100 %</div>
     </div>
 </body>
 </html>
