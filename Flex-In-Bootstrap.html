@@ -12,18 +12,34 @@
     <script src="https://kit.fontawesome.com/5426cd9076.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- Use .flex-column to display the flex items vertically (on top of each other), or .flex-column-reverse to reverse the vertical direction: -->
+<!-- Use the .justify-content-* classes to change the alignment of flex items. Valid classes are start (default), end, center, between or around: -->
     <div class="container">
-        <div class="d-flex flex-column p-2 bg-primary text-light">
+        <!-- the justify-start is the default one u apply it or not apply is same-->
+        <div class="d-flex justify-content-start p-2 bg-primary text-light">
             <div class="bg-success p-2">Item 1</div>
             <div class="bg-danger p-2">Item 2</div>
             <div class="bg-dark p-2">Item 3</div>
         </div><br>
-        <div class="d-flex flex-column-reverse p-2 bg-primary text-light">
+        <div class="d-flex justify-content-end p-2 bg-primary text-light">
             <div class="bg-success p-2">Item 1</div>
             <div class="bg-danger p-2">Item 2</div>
             <div class="bg-dark p-2">Item 3</div>
-        </div>
+        </div><br>
+        <div class="d-flex justify-content-center p-2 bg-primary text-light">
+            <div class="bg-success p-2">Item 1</div>
+            <div class="bg-danger p-2">Item 2</div>
+            <div class="bg-dark p-2">Item 3</div>
+        </div><br>
+        <div class="d-flex justify-content-around p-2 bg-primary text-light">
+            <div class="bg-success p-2">Item 1</div>
+            <div class="bg-danger p-2">Item 2</div>
+            <div class="bg-dark p-2">Item 3</div>
+        </div><br>
+        <div class="d-flex justify-content-between p-2 bg-primary text-light">
+            <div class="bg-success p-2">Item 1</div>
+            <div class="bg-danger p-2">Item 2</div>
+            <div class="bg-dark p-2">Item 3</div>
+        </div><br>
     </div>
 </body>
 </html>
